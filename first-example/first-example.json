@@ -1,0 +1,82 @@
+[
+  {
+    "id": "e14592017c1d676b",
+    "type": "tab",
+    "label": "Flow 1",
+    "disabled": false,
+    "info": "",
+    "env": []
+  },
+  {
+    "id": "1c4cfedcfd7cbc1d",
+    "type": "inject",
+    "z": "e14592017c1d676b",
+    "name": "",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": false,
+    "onceDelay": 0.1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "num",
+    "x": 330,
+    "y": 320,
+    "wires": [["abfdf42eb1ca17c4"]]
+  },
+  {
+    "id": "abfdf42eb1ca17c4",
+    "type": "random",
+    "z": "e14592017c1d676b",
+    "name": "",
+    "low": 1,
+    "high": "800",
+    "inte": "true",
+    "property": "payload",
+    "x": 460,
+    "y": 380,
+    "wires": [["6c3fea8036e4c84f", "f873cd2c7ee3bb26"]]
+  },
+  {
+    "id": "6c3fea8036e4c84f",
+    "type": "ui_gauge",
+    "z": "e14592017c1d676b",
+    "name": "",
+    "group": "",
+    "order": 0,
+    "width": 0,
+    "height": 0,
+    "gtype": "gage",
+    "title": "gauge",
+    "label": "units",
+    "format": "{{value}}",
+    "min": 0,
+    "max": "1023",
+    "colors": ["#00b500", "#e6e600", "#ca3838"],
+    "seg1": "",
+    "seg2": "",
+    "className": "",
+    "x": 610,
+    "y": 320,
+    "wires": []
+  },
+  {
+    "id": "f873cd2c7ee3bb26",
+    "type": "e-mail",
+    "z": "e14592017c1d676b",
+    "server": "smtp.gmail.com",
+    "port": "465",
+    "secure": true,
+    "tls": true,
+    "name": "blvckcenturion@gmail.com",
+    "dname": "",
+    "credentials": {},
+    "x": 680,
+    "y": 460,
+    "wires": []
+  }
+]
